@@ -80,7 +80,7 @@
         if(num === "00") return;
         
         const msg = new SpeechSynthesisUtterance();
-        msg.text = `ขอเชิญหมายเลข ${parseInt(num)} จ้า`;
+        msg.text = `ขอเชิญหมายเลข ${parseInt(num)};
         msg.lang = 'th-TH';
         msg.rate = 0.5;
         
