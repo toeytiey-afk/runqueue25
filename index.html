@@ -32,7 +32,7 @@
     <button class="btn btn-next" onclick="handleNext()">เรียกคิวถัดไป</button>
     
     <div class="flex">
-        <button class="btn btn-recall" onclick="speak()">เรียกซ้ำ</button>
+        <button class="btn btn-recall" onclick="handleRecall()">เรียกซ้ำ</button>
         <button class="btn btn-reset" onclick="handleReset()">เริ่มใหม่</button>
     </div>
     
@@ -80,9 +80,9 @@
         if(num === "00") return;
         
         const msg = new SpeechSynthesisUtterance();
-        msg.text = `ขอเชิญหมายเลข ${parseInt(num)} ค่ะ`;
+        msg.text = `ขอเชิญหมายเลข ${parseInt(num)} จ้า`;
         msg.lang = 'th-TH';
-        msg.rate = 1.0;
+        msg.rate = 0.5;
         
         window.speechSynthesis.cancel();
         window.speechSynthesis.speak(msg);
